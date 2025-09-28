@@ -1,0 +1,60 @@
+{
+  "watchlist": {
+    "NVDA": {
+      "company_specific": {
+        "keywords": ["Nvidia", "GeForce", "CUDA", "AI Chips", "Data Center"]
+      },
+      "sector_industry": {
+        "keywords": ["Semiconductors", "Chip shortage", "GPU", "AMD", "Intel"]
+      },
+      "macro_factors": {
+        "keywords": ["US interest rates", "Inflation", "Recession", "AI market", "Energy prices"]
+      },
+      "geopolitics": {
+        "keywords": ["China export controls", "Taiwan", "Trade war", "CHIPS Act"]
+      }
+    },
+    "TSM": {
+      "company_specific": {
+        "keywords": ["TSMC", "Chip manufacturing", "Wafer", "Foundry"]
+      },
+      "sector_industry": {
+        "keywords": ["Semiconductor industry", "ASML", "Samsung", "Chip demand"]
+      },
+      "macro_factors": {
+        "keywords": ["Energy prices", "Taiwan inflation", "US dollar weakness"]
+      },
+      "geopolitics": {
+        "keywords": ["China Taiwan", "US export ban", "CHIPS Act", "Trade conflict"]
+      }
+    },
+    "WMT": {
+      "company_specific": {
+        "keywords": ["Walmart", "Supercenter", "Retail sales", "Logistics", "Discount"]
+      },
+      "sector_industry": {
+        "keywords": ["Retail", "Target", "Costco", "Consumer sentiment", "Food prices"]
+      },
+      "macro_factors": {
+        "keywords": ["US labor market data", "Inflation", "Consumer confidence"]
+      },
+      "regulation": {
+        "keywords": ["Minimum wage", "Strikes", "Labor law", "Unions"]
+      }
+    },
+    "AMZN": {
+      "company_specific": {
+        "keywords": ["Amazon", "AWS", "Prime", "Fulfillment center", "E-Commerce"]
+      },
+      "sector_industry": {
+        "keywords": ["Online retail", "Cloud", "Alibaba", "Microsoft Azure", "Shopify"]
+      },
+      "macro_factors": {
+        "keywords": ["US inflation", "Consumer sentiment", "Labor market", "Recession"]
+      },
+      "regulation": {
+        "keywords": ["Antitrust", "EU regulation", "FTC", "Data privacy"]
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "watchlist": {
+    "NVDA": {
+      "company_specific": {
+        "keywords": ["Nvidia", "GeForce", "CUDA", "KI Chips", "Rechenzentrum"]
+      },
+      "sector_industry": {
+        "keywords": ["Halbleiter", "Chipmangel", "GPU", "AMD", "Intel"]
+      },
+      "macro_factors": {
+        "keywords": ["US Zinsen", "Inflation", "Rezession", "KI Markt", "Strompreise"]
+      },
+      "geopolitik": {
+        "keywords": ["China Exportkontrolle", "Taiwan", "Handelskrieg", "CHIPS Act"]
+      }
+    },
+    "TSM": {
+      "company_specific": {
+        "keywords": ["TSMC", "Chipproduktion", "Wafer", "Foundry"]
+      },
+      "sector_industry": {
+        "keywords": ["Halbleiterindustrie", "ASML", "Samsung", "Chip Nachfrage"]
+      },
+      "macro_factors": {
+        "keywords": ["Energiepreise", "Inflation Taiwan", "US Dollar Schwäche"]
+      },
+      "geopolitik": {
+        "keywords": ["China Taiwan", "US Exportverbot", "CHIPS Act", "Handelskonflikt"]
+      }
+    },
+    "WMT": {
+      "company_specific": {
+        "keywords": ["Walmart", "Supercenter", "Einzelhandelsumsatz", "Logistik", "Discounter"]
+      },
+      "sector_industry": {
+        "keywords": ["Einzelhandel", "Target", "Costco", "Konsumklima", "Lebensmittelpreise"]
+      },
+      "macro_factors": {
+        "keywords": ["US Arbeitsmarktdaten", "Inflation", "Verbraucherstimmung"]
+      },
+      "regulierung": {
+        "keywords": ["Mindestlohn", "Streiks", "Arbeitsrecht", "Gewerkschaft"]
+      }
+    },
+    "AMZN": {
+      "company_specific": {
+        "keywords": ["Amazon", "AWS", "Prime", "Logistikzentrum", "E-Commerce"]
+      },
+      "sector_industry": {
+        "keywords": ["Onlinehandel", "Cloud", "Alibaba", "Microsoft Azure", "Shopify"]
+      },
+      "macro_factors": {
+        "keywords": ["US Inflation", "Konsumklima", "Arbeitsmarkt", "Rezession"]
+      },
+      "regulierung": {
+        "keywords": ["Kartellverfahren", "EU Regulierung", "FTC", "Datenschutz"]
+      }
+    }
+  }
+}
