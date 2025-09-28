@@ -32,7 +32,7 @@ def save_api_data(directory, api_data):
         f.write(json.dumps(api_data, indent=4, ensure_ascii=False))
 
 def read_model_from_file(filepath):
-    """JSON-Watchlist-Modell laden (z. B. news_watchlist_de.json)."""
+    # JSON-Watchlist-Modell laden (z. B. news_watchlist_de.json).
     filepath = os.path.join("Model", filepath)
     try:
         with open(filepath, "r", encoding="utf-8") as f:
@@ -40,27 +40,9 @@ def read_model_from_file(filepath):
     except Exception as e:
         print(f"Fehler beim Lesen der Datei {filepath}: {e}")
         return None
-    
-def search_and_save_news(directory, api_data, search_tag):
-    # Suche in API-Daten nach einem Stichwort und speichere Treffer
-    results = []
-
-    for news in api_data.get("news", []) + api_data.get("items", []):
-        tags = [t.get("tag", "").lower() for t in news.get("tags", [])]
-        if search_tag.lower() in tags:
-            results.append(news)
-
-    if results:
-        safe_tag = "".join(c for c in search_tag if c.isalnum() or c in ("-", "_")).rstrip()
-        filename = os.path.join(directory, f"tagesschau_{safe_tag}.json")
-
-        with open(filename, "w", encoding="utf-8") as f:
-            f.write(json.dumps(results, indent=4, ensure_ascii=False))
-
-    return len(results)
 
 def search_news(api_data, keyword):
-    """Suche in API-Daten nach einem Stichwort und liefere Treffer."""
+    # Suche in API-Daten nach einem Stichwort und liefere Treffer.
     news_list = api_data.get("news", []) or api_data.get("items", [])
     results = []
     for news in news_list:
@@ -79,24 +61,7 @@ watchlist = model_data.get("watchlist", {})
 
 # Ergebnisse sammeln
 summary = {}
-"""
-for stock, categories in watchlist.items():
-    print(f"🔎 Scanning {stock} ...")
-    total_hits = 0
-    for category, content in categories.items():
-        keywords = content.get("keywords", [])
-        for keyword in keywords:
-            total_hits += search_and_save_news(directory, api_data, keyword)
-    summary[stock] = total_hits
 
-# Zusammenfassung ausgeben
-print("\n📊 Zusammenfassung:")
-for stock, hits in summary.items():
-    print(f"- {stock}: {hits} Treffer")
-"""
-
-
-#""" 
 # Verarbeitung pro Aktie
 for stock, categories in watchlist.items():
     print(f"Scanning {stock} ...")
@@ -128,7 +93,7 @@ for stock, categories in watchlist.items():
 print("\nZusammenfassung:")
 for stock, hits in summary.items():
     print(f"- {stock}: {hits} Treffer")
-#"""
+
 
 
 
