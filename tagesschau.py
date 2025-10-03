@@ -83,7 +83,7 @@ for stock, categories in watchlist.items():
 
     # JSON-Datei pro Aktie speichern
     if stock_results:
-        filename = os.path.join(directory, f"{stock}.json")
+        filename = os.path.join(directory, f"tagesschau_{stock}.json")
         with open(filename, "w", encoding="utf-8") as f:
             f.write(json.dumps(stock_results, indent=4, ensure_ascii=False))
 
