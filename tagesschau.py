@@ -4,7 +4,8 @@ import datetime
 import os
 
 url = "https://www.tagesschau.de/api2u/news/"
-params = {"ressort": "wirtschaft"}
+params = {}
+#params = {"ressort": "wirtschaft"}
 
 def load_api_data(url, params):
     # Lade Daten von der Tagesschau API
@@ -13,7 +14,7 @@ def load_api_data(url, params):
     if response.status_code != 200:
         print("Fehler:", response.status_code)
     api_data = response.json()
-
+    print(f"Es wurden {len(api_data.get('news', []) or api_data.get('items', []))} Nachrichten geladen.")
     return api_data
 
 def create_directory():
@@ -51,9 +52,22 @@ def search_news(api_data, keyword):
             results.append(news)
     return results
 
+def find_all_tags(directory,api_data):
+    # Alle eindeutigen Tags in den API-Daten finden.
+    news_list = api_data.get("news", []) or api_data.get("items", [])
+    tags_set = set()
+    for news in news_list:
+        for tag in news.get("tags", []):
+            tags_set.add(tag.get("tag", "").lower())
+    filename = os.path.join(directory, "all_tags.json")
+    with open(filename, "w", encoding="utf-8") as f:
+        f.write(json.dumps(sorted(tags_set), indent=4, ensure_ascii=False))
+    return sorted(tags_set)
+
 api_data = load_api_data(url, params)
 directory = create_directory()
 save_api_data(directory, api_data)
+find_all_tags(directory, api_data)
 
 # Watchlist laden (z. B. deutsche Keywords)
 model_data = read_model_from_file("news_watchlist_de.json")
